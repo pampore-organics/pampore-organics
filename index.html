@@ -4,14 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pampore Organics | Pure Kashmir</title>
+<meta name="description" content="Buy authentic Kashmiri saffron, honey, kehwa, almonds and walnuts from Pampore Organics.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -38,7 +43,9 @@ h1,h2,h3,.brand {
   font-weight: 600;
 }
 
-.btn:hover { background: #751326; }
+.btn:hover {
+  background: #751326;
+}
 
 .hero {
   background:
@@ -71,6 +78,7 @@ h1,h2,h3,.brand {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .watermark {
@@ -100,7 +108,9 @@ h1,h2,h3,.brand {
   flex-direction: column;
 }
 
-.drawer.open { right: 0; }
+.drawer.open {
+  right: 0;
+}
 
 .overlay {
   position: fixed;
@@ -110,9 +120,14 @@ h1,h2,h3,.brand {
   display: none;
 }
 
-.overlay.show { display: block; }
+.overlay.show {
+  display: block;
+}
 
-.cart-content { overflow-y: auto; flex: 1; }
+.cart-content {
+  overflow-y: auto;
+  flex: 1;
+}
 
 input,textarea,select {
   border: 1px solid #ddd;
@@ -123,8 +138,13 @@ input,textarea,select {
 }
 
 @media(max-width:640px) {
-  .hero { min-height: 520px; }
-  .product-image { height: 210px; }
+  .hero {
+    min-height: 520px;
+  }
+
+  .product-image {
+    height: 210px;
+  }
 }
 </style>
 </head>
@@ -135,26 +155,29 @@ input,textarea,select {
 <header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
 
-    <a href="#home" class="brand text-2xl font-bold" style="color:#9E1B32">
+    <a href="#home" class="brand text-xl md:text-2xl font-bold" style="color:#9E1B32">
       🌸 Pampore Organics
     </a>
 
     <nav class="hidden md:flex gap-8 text-sm font-semibold">
-      <a href="#home" class="hover:text-red-800">Home</a>
-      <a href="#story" class="hover:text-red-800">Our Story</a>
-      <a href="#products" class="hover:text-red-800">Products</a>
-      <a href="#contact" class="hover:text-red-800">Contact Us</a>
+      <a href="#home">Home</a>
+      <a href="#story">Our Story</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact Us</a>
     </nav>
 
-    <button onclick="toggleCart()" class="btn text-sm">
+    <button onclick="toggleCart(true)" class="btn text-sm">
       🛒 Cart (<span id="cartCount">0</span>)
     </button>
+
   </div>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero min-h-[600px] flex items-center text-white">
+
   <div class="max-w-7xl mx-auto px-6 py-24">
+
     <p class="uppercase tracking-[4px] text-orange-300 mb-5">
       The Pride of Kashmir
     </p>
@@ -164,21 +187,25 @@ input,textarea,select {
     </h1>
 
     <p class="mt-6 max-w-2xl text-lg text-gray-200 leading-relaxed">
-      100% Organic Saffron, Honey, Dry Fruits & Traditional Kahwa —
-      Direct from our farms to your home.
+      Authentic Saffron, Honey, Dry Fruits & Traditional Kashmiri Kahwa —
+      Bringing the taste of Kashmir to your home.
     </p>
 
     <a href="#products" class="btn inline-block mt-9">
       Shop Now →
     </a>
+
   </div>
 </section>
 
 <!-- STORY -->
 <section id="story" class="py-20 px-6">
+
   <div class="max-w-5xl mx-auto text-center">
-    <p class="uppercase tracking-widest text-sm mb-3"
-       style="color:#E07A22">Our Heritage</p>
+
+    <p class="uppercase tracking-widest text-sm mb-3" style="color:#E07A22">
+      Our Heritage
+    </p>
 
     <h2 class="text-4xl font-bold mb-6">
       A Taste of Authentic Kashmir
@@ -191,45 +218,56 @@ input,textarea,select {
       Kashmiri kehwa, almonds and walnuts. Every product celebrates
       the richness and heritage of Kashmir.
     </p>
+
   </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products" class="py-20 px-5 bg-[#F3EFE8]">
+
   <div class="max-w-7xl mx-auto">
 
     <div class="text-center mb-12">
-      <p class="uppercase tracking-widest text-sm mb-3"
-         style="color:#E07A22">Our Collection</p>
 
-      <h2 class="text-4xl font-bold">Shop Our Products</h2>
+      <p class="uppercase tracking-widest text-sm mb-3" style="color:#E07A22">
+        Our Collection
+      </p>
+
+      <h2 class="text-4xl font-bold">
+        Shop Our Products
+      </h2>
 
       <p class="text-gray-500 mt-3">
         Handpicked goodness from the heart of Kashmir
       </p>
+
     </div>
 
-    <div id="productGrid"
-         class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- PRODUCT 1 -->
-    
-  
-<div class="product-image">
+      <!-- PRODUCT 1: SAFFRON -->
+      <div class="product-card">
 
-  <!-- KASHMIRI MONGRA SAFFRON IMAGE -->
-  <img
-    src="https://saffrontownkashmir.com/cdn/shop/files/D3774B2A-5338-4C56-A853-37A0D9B8250D.png?v=1780333480&width=1400"
-    alt="Premium Kashmiri Mongra Saffron"
-    style="width:100%; height:100%; object-fit:cover;"
-  >
+        <div class="product-image">
+          <img
+            src="https://saffrontownkashmir.com/cdn/shop/files/D3774B2A-5338-4C56-A853-37A0D9B8250D.png?v=1780333480&width=1400"
+            alt="Premium Kashmiri Mongra Saffron">
+          <span class="watermark">🌸 Pampore Organics</span>
+        </div>
 
-  <!-- PAMPORE ORGANICS BRANDING -->
-  <span class="watermark">
-    🌸 Pampore Organics
-  </span>
-<p class="text-gray-500 text-sm mt-2">1 Gram Box</p>
-          <p class="text-xl font-bold mt-3" style="color:#9E1B32">₹350</p>
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold">
+            Kashmiri Mongra Saffron
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            1 Gram Box
+          </p>
+
+          <p class="text-xl font-bold mt-3" style="color:#9E1B32">
+            ₹350
+          </p>
 
           <label class="text-sm text-gray-600 block mt-4">Quantity</label>
           <select id="qty-0" class="mt-2"></select>
@@ -241,24 +279,33 @@ input,textarea,select {
           <button onclick="addToCart(0)" class="btn w-full mt-4">
             Add to Cart
           </button>
+
         </div>
-    </div>
+      </div>
 
-    
-      <!-- PRODUCT 2 -->
-
-    
+      <!-- PRODUCT 2: HONEY -->
       <div class="product-card">
+
         <div class="product-image">
-          <!-- REPLACE WITH YOUR PAMPORE ORGANICS PRODUCT IMAGE -->
-          <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=700"
-               alt="Pure Kashmiri Honey">
+          <img
+            src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=700"
+            alt="Pure Kashmiri Honey">
           <span class="watermark">🌸 Pampore Organics</span>
         </div>
+
         <div class="p-5">
-          <h3 class="text-xl font-bold">Pure Kashmiri Honey</h3>
-          <p class="text-gray-500 text-sm mt-2">1 Bottle</p>
-          <p class="text-xl font-bold mt-3" style="color:#9E1B32">₹500</p>
+
+          <h3 class="text-xl font-bold">
+            Pure Kashmiri Honey
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            1 Bottle
+          </p>
+
+          <p class="text-xl font-bold mt-3" style="color:#9E1B32">
+            ₹500
+          </p>
 
           <label class="text-sm text-gray-600 block mt-4">Quantity</label>
           <select id="qty-1" class="mt-2"></select>
@@ -270,21 +317,33 @@ input,textarea,select {
           <button onclick="addToCart(1)" class="btn w-full mt-4">
             Add to Cart
           </button>
+
         </div>
       </div>
 
-      <!-- PRODUCT 3 -->
+      <!-- PRODUCT 3: WALNUTS -->
       <div class="product-card">
+
         <div class="product-image">
-          <!-- REPLACE WITH YOUR PAMPORE ORGANICS PRODUCT IMAGE -->
-          <img src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=700"
-               alt="Kashmiri Walnuts">
+          <img
+            src="https://images.unsplash.com/photo-1563412885-139e4045e7c0?w=700"
+            alt="Kashmiri Walnuts">
           <span class="watermark">🌸 Pampore Organics</span>
         </div>
+
         <div class="p-5">
-          <h3 class="text-xl font-bold">Kashmiri Walnuts (Akhrot)</h3>
-          <p class="text-gray-500 text-sm mt-2">1 Kg Pack</p>
-          <p class="text-xl font-bold mt-3" style="color:#9E1B32">₹1,000</p>
+
+          <h3 class="text-xl font-bold">
+            Kashmiri Walnuts (Akhrot)
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            1 Kg Pack
+          </p>
+
+          <p class="text-xl font-bold mt-3" style="color:#9E1B32">
+            ₹1,000
+          </p>
 
           <label class="text-sm text-gray-600 block mt-4">Quantity</label>
           <select id="qty-2" class="mt-2"></select>
@@ -296,47 +355,71 @@ input,textarea,select {
           <button onclick="addToCart(2)" class="btn w-full mt-4">
             Add to Cart
           </button>
+
         </div>
       </div>
 
-      <!-- PRODUCT 4 -->
+      <!-- PRODUCT 4: ALMONDS -->
       <div class="product-card">
+
         <div class="product-image">
-          <!-- REPLACE WITH YOUR PAMPORE ORGANICS PRODUCT IMAGE -->
-          <img src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=700"
-               alt="Kashmiri Almonds">
+          <img
+            src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=700"
+            alt="Kashmiri Almonds">
           <span class="watermark">🌸 Pampore Organics</span>
         </div>
+
         <div class="p-5">
-          <h3 class="text-xl font-bold">Kashmiri Almonds (Badam)</h3>
-          <p class="text-gray-500 text-sm mt-2">1 Kg Pack</p>
-          <p class="text-xl font-bold mt-3" style="color:#9E1B32">₹800</p>
+
+          <h3 class="text-xl font-bold">
+            Kashmiri Almonds (Badam)
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            1 Kg Pack
+          </p>
+
+          <p class="text-xl font-bold mt-3" style="color:#9E1B32">
+            ₹500
+          </p>
 
           <label class="text-sm text-gray-600 block mt-4">Quantity</label>
           <select id="qty-3" class="mt-2"></select>
 
           <p class="text-sm mt-3">
-            Subtotal: <b id="subtotal-3">₹800</b>
+            Subtotal: <b id="subtotal-3">₹500</b>
           </p>
 
           <button onclick="addToCart(3)" class="btn w-full mt-4">
             Add to Cart
           </button>
+
         </div>
       </div>
 
-      <!-- PRODUCT 5 -->
+      <!-- PRODUCT 5: KEHWA -->
       <div class="product-card">
+
         <div class="product-image">
-          <!-- REPLACE WITH YOUR PAMPORE ORGANICS PRODUCT IMAGE -->
-          <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=700"
-               alt="Traditional Kashmiri Kehwa">
+          <img
+            src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=700"
+            alt="Traditional Kashmiri Kehwa">
           <span class="watermark">🌸 Pampore Organics</span>
         </div>
+
         <div class="p-5">
-          <h3 class="text-xl font-bold">Traditional Kashmiri Kehwa</h3>
-          <p class="text-gray-500 text-sm mt-2">1 Bottle</p>
-          <p class="text-xl font-bold mt-3" style="color:#9E1B32">₹300</p>
+
+          <h3 class="text-xl font-bold">
+            Traditional Kashmiri Kehwa
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            1 Pack
+          </p>
+
+          <p class="text-xl font-bold mt-3" style="color:#9E1B32">
+            ₹300
+          </p>
 
           <label class="text-sm text-gray-600 block mt-4">Quantity</label>
           <select id="qty-4" class="mt-2"></select>
@@ -348,6 +431,7 @@ input,textarea,select {
           <button onclick="addToCart(4)" class="btn w-full mt-4">
             Add to Cart
           </button>
+
         </div>
       </div>
 
@@ -355,14 +439,20 @@ input,textarea,select {
   </div>
 </section>
 
-<!-- CART DRAWER -->
-<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+<!-- CART OVERLAY -->
+<div id="overlay" class="overlay" onclick="toggleCart(false)"></div>
 
+<!-- CART DRAWER -->
 <div id="cartDrawer" class="drawer">
 
   <div class="p-5 border-b flex justify-between items-center">
-    <h2 class="text-2xl font-bold">Your Shopping Cart</h2>
-    <button onclick="toggleCart()" class="text-2xl">✕</button>
+
+    <h2 class="text-2xl font-bold">
+      Your Shopping Cart
+    </h2>
+
+    <button onclick="toggleCart(false)" class="text-2xl">✕</button>
+
   </div>
 
   <div id="cartItems" class="cart-content p-5">
@@ -372,6 +462,7 @@ input,textarea,select {
   </div>
 
   <div class="p-5 border-t">
+
     <div class="flex justify-between font-bold text-xl mb-5">
       <span>Grand Total</span>
       <span id="grandTotal" style="color:#9E1B32">₹0</span>
@@ -384,16 +475,20 @@ input,textarea,select {
     <p class="text-xs text-gray-500 text-center mt-3">
       Confirm your order directly with us on WhatsApp.
     </p>
+
   </div>
 </div>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 px-5">
+
   <div class="max-w-7xl mx-auto">
 
     <div class="text-center mb-12">
-      <p class="uppercase tracking-widest text-sm mb-3"
-         style="color:#E07A22">Get In Touch</p>
+
+      <p class="uppercase tracking-widest text-sm mb-3" style="color:#E07A22">
+        Get In Touch
+      </p>
 
       <h2 class="text-4xl font-bold">
         Contact Pampore Organics
@@ -402,23 +497,21 @@ input,textarea,select {
       <p class="text-gray-500 mt-3">
         We would love to hear from you.
       </p>
+
     </div>
 
     <div class="grid md:grid-cols-2 gap-12">
 
-      <!-- CONTACT DETAILS -->
       <div class="space-y-6">
 
         <div class="bg-white p-6 rounded-xl shadow-sm">
           <h3 class="text-xl font-bold mb-2">📞 Phone / WhatsApp</h3>
-          <p class="text-gray-600">+91 XXXXX XXXXX</p>
-          <!-- REPLACE WITH YOUR REAL PHONE NUMBER -->
+          <p class="text-gray-600">+91 9149479306</p>
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm">
           <h3 class="text-xl font-bold mb-2">✉️ Email Address</h3>
-          <p class="text-gray-600">your-email@example.com</p>
-          <!-- REPLACE WITH YOUR REAL EMAIL -->
+          <p class="text-gray-600">Contact us through WhatsApp</p>
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm">
@@ -430,7 +523,7 @@ input,textarea,select {
 
       </div>
 
-      <!-- INQUIRY FORM -->
+      <!-- CONTACT FORM -->
       <form id="contactForm"
             class="bg-white p-7 rounded-xl shadow-sm space-y-5">
 
@@ -467,7 +560,9 @@ input,textarea,select {
 <!-- FOOTER -->
 <footer class="bg-[#1F3025] text-white py-9 px-5 text-center">
 
-  <h2 class="brand text-2xl mb-3">🌸 Pampore Organics</h2>
+  <h2 class="brand text-2xl mb-3">
+    🌸 Pampore Organics
+  </h2>
 
   <p class="text-gray-300 text-sm">
     Bringing the authentic taste of Kashmir to your home.
@@ -483,35 +578,49 @@ input,textarea,select {
 
 // PRODUCT DATA
 const products = [
-  {name:"Kashmiri Mongra Saffron", price:350, unit:"Box"},
+  {name:"Kashmiri Mongra Saffron", price:350, unit:"Gram"},
   {name:"Pure Kashmiri Honey", price:500, unit:"Bottle"},
   {name:"Kashmiri Walnuts (Akhrot)", price:1000, unit:"Kg"},
-  {name:"Kashmiri Almonds (Badam)", price:800, unit:"Kg"},
-  {name:"Traditional Kashmiri Kehwa", price:300, unit:"Bottle"}
+  {name:"Kashmiri Almonds (Badam)", price:500, unit:"Kg"},
+  {name:"Traditional Kashmiri Kehwa", price:300, unit:"Pack"}
 ];
 
-// CART STORAGE
+// WHATSAPP NUMBER
+const whatsappNumber = "919149479306";
+
+// CART
 let cart = {};
 
 // INITIALIZE QUANTITY SELECTORS
 products.forEach((product,index)=>{
+
   const select = document.getElementById("qty-"+index);
 
-  for(let i=1;i<=10;i++){
+  for(let i=1; i<=10; i++){
+
     const option = document.createElement("option");
     option.value = i;
     option.textContent = i;
+
     select.appendChild(option);
   }
 
   select.addEventListener("change",()=>{
+
     const quantity = Number(select.value);
     const subtotal = quantity * product.price;
 
     document.getElementById("subtotal-"+index).textContent =
-      "₹"+subtotal.toLocaleString("en-IN");
+      formatPrice(subtotal);
+
   });
+
 });
+
+// FORMAT PRICE
+function formatPrice(amount){
+  return "₹"+amount.toLocaleString("en-IN");
+}
 
 // ADD TO CART
 function addToCart(index){
@@ -533,7 +642,7 @@ function addToCart(index){
   toggleCart(true);
 }
 
-// UPDATE CART QUANTITY
+// CHANGE QUANTITY
 function changeQuantity(index,change){
 
   if(!cart[index]) return;
@@ -551,11 +660,6 @@ function changeQuantity(index,change){
 function removeItem(index){
   delete cart[index];
   renderCart();
-}
-
-// FORMAT PRICE
-function formatPrice(amount){
-  return "₹"+amount.toLocaleString("en-IN");
 }
 
 // RENDER CART
@@ -582,18 +686,23 @@ function renderCart(){
 
     div.innerHTML = `
       <div class="flex justify-between gap-3">
+
         <div>
           <h3 class="font-bold">${item.name}</h3>
+
           <p class="text-sm text-gray-500">
             ${formatPrice(item.price)} / ${item.unit}
           </p>
+
           <p class="font-semibold mt-2">
             ${formatPrice(subtotal)}
           </p>
         </div>
 
         <div class="text-right">
+
           <div class="flex items-center gap-2">
+
             <button onclick="changeQuantity(${key},-1)"
                     class="border rounded px-3 py-1">−</button>
 
@@ -601,28 +710,34 @@ function renderCart(){
 
             <button onclick="changeQuantity(${key},1)"
                     class="border rounded px-3 py-1">+</button>
+
           </div>
 
           <button onclick="removeItem(${key})"
                   class="text-red-600 text-sm mt-3">
             Remove
           </button>
+
         </div>
       </div>
     `;
 
     container.appendChild(div);
+
   });
 
   if(count === 0){
+
     container.innerHTML =
       '<p class="text-gray-500 text-center mt-10">Your cart is empty.</p>';
+
   }
 
   document.getElementById("cartCount").textContent = count;
 
   document.getElementById("grandTotal").textContent =
     formatPrice(total);
+
 }
 
 // CART DRAWER
@@ -635,9 +750,10 @@ function toggleCart(forceOpen){
     drawer.classList.add("open");
     overlay.classList.add("show");
   }else{
-    drawer.classList.toggle("open");
-    overlay.classList.toggle("show");
+    drawer.classList.remove("open");
+    overlay.classList.remove("show");
   }
+
 }
 
 // WHATSAPP CHECKOUT
@@ -648,7 +764,7 @@ function checkout(){
     return;
   }
 
-  let message = "🌸 *NEW ORDER - PAMPORE ORGANICS* 🌸\n\n";
+  let message = "🌸 NEW ORDER - PAMPORE ORGANICS 🌸\n\n";
   let total = 0;
 
   Object.values(cart).forEach(item=>{
@@ -656,30 +772,21 @@ function checkout(){
     const subtotal = item.price * item.quantity;
     total += subtotal;
 
-    message +=
-      `• ${item.name}\n`+
-      `  Quantity: ${item.quantity} ${item.unit}\n`+
-      `  Price: ${formatPrice(subtotal)}\n\n`;
+    message += `${item.name}\n`;
+    message += `Quantity: ${item.quantity} ${item.unit}\n`;
+    message += `Price: ${formatPrice(subtotal)}\n\n`;
+
   });
 
-  message +=
-    `--------------------------\n`+
-    `*GRAND TOTAL: ${formatPrice(total)}*\n\n`+
-    `Please confirm my order.`;
+  message += `GRAND TOTAL: ${formatPrice(total)}\n`;
+  message += "Please confirm my order.";
 
-  // REPLACE WITH YOUR WHATSAPP NUMBER
-  const whatsappNumber = "9149479306
-
-  if(!/^91\d{10}$/.test(whatsappNumber)){
-    alert("Please add your real WhatsApp number in the website code first.");
-    return;
-  }
-
-  window.open(
+  const url =
     "https://wa.me/"+whatsappNumber+
-    "?text="+encodeURIComponent(message),
-    "_blank"
-  );
+    "?text="+encodeURIComponent(message);
+
+  window.open(url,"_blank");
+
 }
 
 // CUSTOMER INQUIRY FORM
@@ -688,36 +795,35 @@ document.getElementById("contactForm")
 
   e.preventDefault();
 
-  const name = document.getElementById("customerName").value.trim();
-  const phone = document.getElementById("customerPhone").value.trim();
-  const message = document.getElementById("customerMessage").value.trim();
+  const name =
+    document.getElementById("customerName").value.trim();
+
+  const phone =
+    document.getElementById("customerPhone").value.trim();
+
+  const message =
+    document.getElementById("customerMessage").value.trim();
 
   if(!name || !phone || !message){
     alert("Please fill in all fields.");
     return;
   }
 
-  // REPLACE WITH YOUR WHATSAPP NUMBER
-  const whatsappNumber = "9149479306;
-
-  if(!/^91\d{10}$/.test(whatsappNumber)){
-    alert("Please add your real WhatsApp number in the website code first.");
-    return;
-  }
-
   const text =
     `Hello Pampore Organics!\n\n`+
     `Name: ziyabashir
-    `Phone: 9149479306
-    `Message: ${message}`;
+    `Phone : 9149479306
+    `Message: whatsapp
 
-  window.open(
+  const url =
     "https://wa.me/"+whatsappNumber+
-    "?text="+encodeURIComponent(text),
-    "_blank"
-  );
+    "?text="+encodeURIComponent(text);
+
+  window.open(url,"_blank");
+
 });
 
+// INITIALIZE CART
 renderCart();
 
 </script>
